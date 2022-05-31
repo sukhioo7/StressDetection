@@ -1,6 +1,6 @@
 #app.py
 from flask import Flask,request, url_for, redirect, render_template
-import pickle5 as pickle
+import pickle
 import numpy as np
 
 app = Flask(__name__)
