@@ -15,7 +15,7 @@ def home():
 def predict():
     # receive the values send by user in three text boxes thru request object -> requesst.form.values()
     
-    int_features = [int(x) for x in request.form.values()]
+    int_features = [float(x) for x in request.form.values()]
     scaledValue = scaleModel.transform([int_features]) 
     loadModel = pickle.load(open("Stress_model_save (1)","rb"))
     result = loadModel.predict(scaledValue)    
