@@ -1,5 +1,5 @@
 Flask
-gunicron
+gunicorn
 Jinja2
 numpy
 scikit-learn
