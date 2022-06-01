@@ -2,140 +2,188 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stress Detection</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <style>
-        
-*{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body{
-    display: flex;
-    width: 100%;
-}
-body>div{
-    width: 50%;
-    height: 100vh;
-}
-.mainCon1{
-    color: white;
-    background-color: #1C6DD0;
-    border-radius: 0 3.3vw 3.3vw 0;
-}
-.mainCon2>div{
-    width: 100%;
-    height: auto;
-    /* background-color: blue;s */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-body>div>h1{
-    height: 6vw;
-    /* background-color: brown; */
-    /* text-align: end; */
-    padding-top: 3vw;
-    font-size: 3vw;
-}
-body>div>h1>i{
-    margin-right: 0.3vw;
-}
-.head1{
-    text-align: end;
-    padding-right: 0.2vw;
-}
-.head2{
-    padding-left: 0.2vw;
-}
-.aboutPro>h2,.mainCon1>h3{
-    padding-top: 4vw;
-    text-align: center;
-}
-.aboutPro>p{
-    padding: 4vw;
-    font-size: 1.3vw;
-}
-form{
-    margin-top: 20%;
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-direction: column;
-}
-form>div{
-    margin: 0.4vw 0 0.4vw 0;
-    font-size: 1.8vw;
-    display: flex;
-    padding: 0 7vw 0 7vw;
-    width: 100%;
-    /* background-color: beige; */
-    justify-content:space-between;
-}
-form>div>input{
-    width: 50%;
-    border-radius: 0.4vw;
-    border: 2px solid #1C6DD0;
-}
-form>div>input[type=text]{
-    font-size: 1vw;
-    padding: 0.4vw;
-}
-form>button{
-    font-size: 1.8vw;
-    margin: 0.4vw 7vw 0.4vw 7vw;
-    border-radius: 0.4vw;
-    border: none;
-    background-color: #1C6DD0;
-    color: white;
-    padding: 0.3vw 0 0.3vw 0;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-form>button:hover{
-    box-shadow: none;
-    cursor: pointer;
-}
-p{
-    font-size: 1.1vw;
-    /* background-color: aqua; */
-    padding: 1.5vw;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            width: 100%;
+        }
+
+        body>div {
+            width: 50%;
+            height: 100vh;
+        }
+
+        .mainCon1 {
+            color: white;
+            background-color: #1C6DD0;
+            border-radius: 0 3.3vw 3.3vw 0;
+        }
+
+        .mainCon2>div {
+            width: 100%;
+            height: auto;
+            /* background-color: blue;s */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        body>div>h1 {
+            height: 6vw;
+            /* background-color: brown; */
+            /* text-align: end; */
+            padding-top: 3vw;
+            font-size: 3vw;
+        }
+
+        body>div>h1>i {
+            margin-right: 0.3vw;
+        }
+
+        .head1 {
+            text-align: end;
+            padding-right: 0.2vw;
+        }
+
+        .head2 {
+            padding-left: 0.2vw;
+        }
+
+        .head3 {
+            display: none;
+        }
+
+        .aboutPro>h2,
+        .mainCon1>h3 {
+            padding-top: 4vw;
+            text-align: center;
+        }
+
+        .aboutPro>p {
+            padding: 4vw;
+            font-size: 1.3vw;
+        }
+
+        form {
+            margin-top: 20%;
+            /* background-color: aquamarine; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        form>div {
+            margin: 0.4vw 0 0.4vw 0;
+            font-size: 1.8vw;
+            display: flex;
+            padding: 0 7vw 0 7vw;
+            width: 100%;
+            /* background-color: beige; */
+            justify-content: space-between;
+        }
+
+        form>div>input {
+            width: 50%;
+            border-radius: 0.4vw;
+            border: 2px solid #1C6DD0;
+        }
+
+        form>div>input[type=text] {
+            font-size: 1vw;
+            padding: 0.4vw;
+        }
+
+        form>button {
+            font-size: 1.8vw;
+            margin: 0.4vw 7vw 0.4vw 7vw;
+            border-radius: 0.4vw;
+            border: none;
+            background-color: #1C6DD0;
+            color: white;
+            padding: 0.3vw 0 0.3vw 0;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        form>button:hover {
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1.1vw;
+            /* background-color: aqua; */
+            padding: 1.5vw;
+        }
 
 
-@media only screen and (max-width: 768px){ 
-    body{
-        flex-direction: column;
-    }
-    body>div{
-        width: 100%;
-        height: 50vw;
-    }
-    .head1,.head2{
-        display: none;
-    }
-    .head3{
-        text-align: center;
-        font-size: 5vw;
-    }
-    .aboutPro>h2{
-        font-size: 3vw;
-        margin-top: 2vw;
-    }
-    .aboutPro>p{
-        font-size: 2vw;
-    }
-}
+        @media screen and (max-width: 608px) {
+            body {
+                flex-direction: column;
+            }
 
+            body>div {
+                width: 100%;
+                height: 50vw;
+            }
 
+            .head1,
+            .head2 {
+                display: none;
+            }
 
+            .head3 {
+                display: block;
+                text-align: center;
+                font-size: 5vw;
+            }
 
+            .aboutPro>h2 {
+                font-size: 3vw;
+                margin-top: 2vw;
+            }
+
+            .aboutPro>p {
+                font-size: 2vw;
+            }
+
+            .mainCon1>h3 {
+                font-size: 2vw;
+            }
+
+            form>button {
+                font-size: 2.8vw;
+                margin: 1.8vw 7vw 0.4vw 7vw;
+            }
+
+            form>div {
+                font-size: 2.8vw;
+            }
+
+            form>div>input {
+                width: 50%;
+                border-radius: 0.4vw;
+                border: 2px solid #1C6DD0;
+            }
+
+            form>div>input[type=text] {
+                font-size: 2vw;
+                padding: 0.4vw;
+            }
+
+        }
     </style>
 </head>
 
@@ -145,11 +193,14 @@ p{
         <h1 class="head3"><i class="fas fa-brain"></i>Stress Detection</h1>
         <div class="aboutPro">
             <h2>About the Project</h2>
-            <p>Considering today’s lifestyle, people just sleep forgetting the benefits sleep provides to the human body.
-            Smart-Yoga Pillow (SaYoPillow) is proposed to help in understanding the relationship between stress and
-            sleep and to fully materialize the idea of “Smart-Sleeping” by proposing an edge device. An edge processor
-            with a model analyzing the physiological changes that occur during sleep along with the sleeping habits is
-            proposed. Based on these changes during sleep, stress prediction for the following day is proposed.</p> 
+            <p>Considering today’s lifestyle, people just sleep forgetting the benefits sleep provides to the human
+                body.
+                Smart-Yoga Pillow (SaYoPillow) is proposed to help in understanding the relationship between stress and
+                sleep and to fully materialize the idea of “Smart-Sleeping” by proposing an edge device. An edge
+                processor
+                with a model analyzing the physiological changes that occur during sleep along with the sleeping habits
+                is
+                proposed. Based on these changes during sleep, stress prediction for the following day is proposed.</p>
         </div>
         <h3>The Project is made By Sukhdeep Singh</h3>
     </div>
