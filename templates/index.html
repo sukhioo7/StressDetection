@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title> Student Result Prediction </title>
-</head> 
-<body>
-	 
-   <h2>Result Prediction</h2>
-	<h3>Predict the probability of Student Result(Pass/Fail) </h3>
-            
-    <form action='/predict' method="post">
-        <label for="text2">Tell me about Your Snoring range: </label>
-        <input type="text" name="text2">
-        <label for="text3">Tell me about Your Body Temperature: </label>
-        <input type="text" name="text3">
-        <label for="text4">Tell me how many hours of Sleep?: </label>
-        <input type="text" name="text4">
-        <label for="text1">Tell me the heart rate: </label>
-        <input type="text" name="text1">
-        <button type="submit">Predict</button>
-    </form>
-       
-     <br> {{pred}}<br>  
 
-  </body>
+<head>
+    <title>Stress Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+</head>
+
+<body>
+    <div class="mainCon1">
+        <h1 class="head1"><i class="fas fa-brain"></i>Stress</h1>
+        <div class="aboutPro">
+            <h2>About the Project</h2>
+            <p>Considering today’s lifestyle, people just sleep forgetting the benefits sleep provides to the human body.
+            Smart-Yoga Pillow (SaYoPillow) is proposed to help in understanding the relationship between stress and
+            sleep and to fully materialize the idea of “Smart-Sleeping” by proposing an edge device. An edge processor
+            with a model analyzing the physiological changes that occur during sleep along with the sleeping habits is
+            proposed. Based on these changes during sleep, stress prediction for the following day is proposed.</p> 
+        </div>
+    </div>
+    <div class="mainCon2">
+        <h1 class="head2">Detection</h1>
+        <div>
+            <form action='/predict' method="post">
+                <div>
+                    <label for="text2">Snoring range: </label>
+                    <input type="text" name="text2">
+                </div>
+                <div>
+                    <label for="text3">Body Temperature: </label>
+                    <input type="text" name="text3">
+                </div>
+                <div>
+                    <label for="text4">Hours of Sleep: </label>
+                    <input type="text" name="text4">
+                </div>
+                <div>
+                    <label for="text1">Tell me the heart rate: </label>
+                    <input type="text" name="text1">
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+            <p>{{pred}}</p>
+        </div>
+    </div>
+</body>
+
 </html>
