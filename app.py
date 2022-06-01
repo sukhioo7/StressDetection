@@ -20,14 +20,14 @@ def predict():
     loadModel = pickle.load(open("Stress_model_save (1)","rb"))
     result = loadModel.predict(scaledValue)    
     if result[0]==0:
-        return render_template('index.html', pred='Your Stress level is Normal or Low)
+        return render_template('index.html', pred='Your Stress level is Normal or Low')
     elif result[0]==1:
-        return render_template('index.html', pred='Your Stress level is Medium low)
+        return render_template('index.html', pred='Your Stress level is Medium low')
     elif result[0]==2:
-        return render_template('index.html', pred='Your Stress level is Medium)
+        return render_template('index.html', pred='Your Stress level is Medium')
     elif result[0]==3:
-        return render_template('index.html', pred='Your Stress level is Medium High)   
+        return render_template('index.html', pred='Your Stress level is Medium High')   
     elif result[0]==4:
-        return render_template('index.html', pred='Your Stress level is High)   
+        return render_template('index.html', pred='Your Stress level is High')   
 if __name__ == '__main__':
     app.run(debug=False)
