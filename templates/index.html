@@ -218,19 +218,19 @@
             <form action='/predict' method="post">
                 <div>
                     <label for="text2">Snoring range: </label>
-                    <input type="text" name="text2" placeholder="Ranges b/w 50 and 95">
+                    <input type="text" name="text2" placeholder="Ranges b/w 50 and 95" required>
                 </div>
                 <div>
                     <label for="text3">Body Temperature: </label>
-                    <input type="text" name="text3" placeholder="Calsius">
+                    <input type="text" name="text3" placeholder="Fahrenheit" required>
                 </div>
                 <div>
                     <label for="text4">Hours of Sleep: </label>
-                    <input type="text" name="text4" placeholder="In Hours">
+                    <input type="text" name="text4" placeholder="In Hours" required>
                 </div>
                 <div>
                     <label for="text1">Heart rate: </label>
-                    <input type="text" name="text1" placeholder="Ranges b/w 60 and 220">
+                    <input type="text" name="text1" placeholder="Ranges b/w 60 and 220" required>
                 </div>
                 <button type="submit">Predict</button>
             </form>
